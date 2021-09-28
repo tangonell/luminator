@@ -5,7 +5,6 @@ module.exports = {
 		.setName('ping')
 		.setDescription('Gets bot ping.'),
 	async execute(interaction) {
-        let ping = interaction.createdTimestamp - Date.now()
-		await interaction.reply(`${ping}ms`);
+		await interaction.reply(`${client.ws.ping}ms`);
 	},
 };
