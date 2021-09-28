@@ -44,7 +44,8 @@ module.exports = {
                 var image = images[0];
                 var breed = image.breeds[0];
 
-                interaction.reply({ content: "**"+ breed.name + "**\n"+ breed.temperament, files: [ image.url ] } );
+                await interaction.reply('Fetching...')
+                await interaction.editReply({ content: '**'+ breed.name + '**\n'+ breed.temperament, files: [ image.url ] } );
 
             } catch(error) {
                 console.log(error)
